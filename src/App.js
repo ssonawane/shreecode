@@ -1,10 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import ReactBody from "./components/ReactBody";
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome !</h1>
+      <Navbar />
+      <br />
+      <br />
+      <ReactBody />
     </div>
   );
 }
