@@ -1,0 +1,16 @@
+.quesText:hover {
+  text-decoration: none;
+}
+
+.quesText:focus {
+  text-decoration: none;
+}
+
+.ansText {
+  background-color: #0000001c;
+}
+
+.quesText {
+  white-space: unset;
+  text-align: left;
+}
