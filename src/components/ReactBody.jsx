@@ -70,7 +70,7 @@ export default function ReactBody(props) {
                 {ques.answer}
                 {
                     ques.img !== "" && <div className="mt-3">
-                        <img src={ques.img} />
+                        <img src={ques.img} class="img-fluid" />
                     </div>
                 }
             </div>
