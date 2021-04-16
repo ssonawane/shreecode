@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function App() {
   let [input, setInput] = useState("");
-  let [selectType, setSelectType] = useState("react");
+  let [selectType, setSelectType] = useState("redux");
   const getSearchInput = function (ip) {
     input = ip;
     setInput(ip);

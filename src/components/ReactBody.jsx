@@ -68,6 +68,11 @@ export default function ReactBody(props) {
         <div id={"collapseOne" + ques.id} className="collapse" aria-labelledby={"heading" + ques.id} data-parent="#accordionExample">
             <div className={"card-body " + styles.ansText}>
                 {ques.answer}
+                {
+                    ques.img !== "" && <div className="mt-3">
+                        <img src={ques.img} />
+                    </div>
+                }
             </div>
         </div>
     </div ><hr style={{ 'margin': '0px' }} /></React.Fragment>)
