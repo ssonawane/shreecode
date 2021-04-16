@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './ReactBody.module.css'
+import Pagination from './pagination'
 
 export default function ReactBody(props) {
 
     const [input, setInput] = useState('');
+    const [currentPage, setCurrentPage] = useState('1');
     const [intrvwQues, setIntrvwQues] = useState([]);
     const [defaultIntrQues, setDefaultIntrQues] = useState([]);
 
     useEffect(() => {
         axios.get('./data.json').then(resp => {
-            setDefaultIntrQues(resp.data)
-            setIntrvwQues(resp.data)
+            setDefaultIntrQues(resp.data);
+            setIntrvwQues(resp.data.slice(0, 10))
         }).catch(err => {
             console.log("error", err)
         })
@@ -23,8 +25,30 @@ export default function ReactBody(props) {
             return obj.question.toLowerCase().includes(props.input.toLowerCase())
         })
 
-        setIntrvwQues(filtered)
+        setIntrvwQues(filtered);
+
+        if (!props.input) {
+            setIntrvwQues(defaultIntrQues.slice(0, 10))
+        }
+
     }, [props.input])
+
+    function getInterQuesList(start, end) {
+        setIntrvwQues(defaultIntrQues.slice(start, end));
+    }
+
+    function callPagination(item) {
+        switch (item) {
+            case '1':
+                getInterQuesList(0, 10);
+                setCurrentPage('1')
+                break;
+            case '2':
+                getInterQuesList(10, 20);
+                setCurrentPage('2')
+                break;
+        }
+    }
 
     const renderingItems = intrvwQues.map(ques => <React.Fragment><div className="align-top" key={ques.id}>
         <div className="" id={"headingThree" + ques.id}>
@@ -46,19 +70,7 @@ export default function ReactBody(props) {
         <div className="col-md-8 accordion" id="accordionExample">
             {renderingItems}
             <br /> <br />
-            <nav aria-label="Page navigation example">
-                <ul className="pagination justify-content-center">
-                    <li className="page-item disabled">
-                        <a className="page-link" href="#" tabIndex="-1">Previous</a>
-                    </li>
-                    <li className="page-item"><a className="page-link" href="#">1</a></li>
-                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                    <li className="page-item"><a className="page-link" href="#">3</a></li>
-                    <li className="page-item">
-                        <a className="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
+            <Pagination callPagination={callPagination} searchIp={props.input} currentPage={currentPage} />
         </div>
     </div>
 
