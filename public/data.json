@@ -120,7 +120,7 @@
       {
         "id": 3,
         "question": "What are three core concepts in Redux ?",
-        "answer": "1.Store - Holds state of your application \n2.Action - Describes the changes in the state of application \n3.Reducer - Carries out the state transition depending on the action"
+        "answer": "1.Store - Holds state of your application 2.Action - Describes the changes in the state of application 3.Reducer - Carries out the state transition depending on the action"
       }
     ]
   }

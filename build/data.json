@@ -1,103 +1,127 @@
 [
   {
-    "id": "1",
-    "question": "What is React ?",
-    "answer": "React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012."
-  },
-  {
-    "id": "2",
-    "question": "What is JSX ?",
-    "answer": "JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax."
-  },
-  {
-    "id": "3",
-    "question": "What is the difference between Element and Component ?",
-    "answer": "An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated."
-  },
-  {
-    "id": "4",
-    "question": "When to use a Class Component over a Function Component ?",
-    "answer": "If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component."
-  },
-  {
-    "id": "5",
-    "question": "What is state in React ?",
-    "answer": "State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components."
-  },
-  {
-    "id": "6",
-    "question": "What are Pure Components ?",
-    "answer": "React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called."
-  },
-  {
-    "id": "7",
-    "question": "What is 'key' prop and what is the benefit of using it in arrays of elements ?",
-    "answer": "A key is a special string attribute you should include when creating arrays of elements. Key prop helps React identify which items have changed, are added, or are removed."
-  },
-  {
-    "id": "8",
-    "question": "What is Virtual DOM ?",
-    "answer": "The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the 'real' DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation."
-  },
-  {
-    "id": "9",
-    "question": "What is React Fiber ?",
-    "answer": "The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames."
-  },
-  {
-    "id": "10",
-    "question": "What are controlled components ?",
-    "answer": "A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function."
+    "react": [
+      {
+        "id": "1",
+        "question": "What is React ?",
+        "answer": "React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012."
+      },
+      {
+        "id": "2",
+        "question": "What is JSX ?",
+        "answer": "JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax."
+      },
+      {
+        "id": "3",
+        "question": "What is the difference between Element and Component ?",
+        "answer": "An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated."
+      },
+      {
+        "id": "4",
+        "question": "When to use a Class Component over a Function Component ?",
+        "answer": "If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component."
+      },
+      {
+        "id": "5",
+        "question": "What is state in React ?",
+        "answer": "State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components."
+      },
+      {
+        "id": "6",
+        "question": "What are Pure Components ?",
+        "answer": "React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called."
+      },
+      {
+        "id": "7",
+        "question": "What is 'key' prop and what is the benefit of using it in arrays of elements ?",
+        "answer": "A key is a special string attribute you should include when creating arrays of elements. Key prop helps React identify which items have changed, are added, or are removed."
+      },
+      {
+        "id": "8",
+        "question": "What is Virtual DOM ?",
+        "answer": "The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the 'real' DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation."
+      },
+      {
+        "id": "9",
+        "question": "What is React Fiber ?",
+        "answer": "The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames."
+      },
+      {
+        "id": "10",
+        "question": "What are controlled components ?",
+        "answer": "A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function."
+      },
+
+      {
+        "id": "11",
+        "question": "What is React ?",
+        "answer": "React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012."
+      },
+      {
+        "id": "12",
+        "question": "What is JSX ?",
+        "answer": "JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax."
+      },
+      {
+        "id": "13",
+        "question": "What is the difference between Element and Component ?",
+        "answer": "An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated."
+      },
+      {
+        "id": "14",
+        "question": "When to use a Class Component over a Function Component ?",
+        "answer": "If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component."
+      },
+      {
+        "id": "15",
+        "question": "What is state in React ?",
+        "answer": "State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components."
+      },
+      {
+        "id": "16",
+        "question": "What are Pure Components ?",
+        "answer": "React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called."
+      },
+      {
+        "id": "17",
+        "question": "What is 'key' prop and what is the benefit of using it in arrays of elements ?",
+        "answer": "A key is a special string attribute you should include when creating arrays of elements. Key prop helps React identify which items have changed, are added, or are removed."
+      },
+      {
+        "id": "18",
+        "question": "What is Virtual DOM ?",
+        "answer": "The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the 'real' DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation."
+      },
+      {
+        "id": "19",
+        "question": "What is React Fiber ?",
+        "answer": "The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames."
+      },
+      {
+        "id": "20",
+        "question": "What are controlled components ?",
+        "answer": "A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function."
+      }
+    ]
   },
 
   {
-    "id": "11",
-    "question": "What is React ?",
-    "answer": "React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012."
-  },
-  {
-    "id": "12",
-    "question": "What is JSX ?",
-    "answer": "JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax."
-  },
-  {
-    "id": "13",
-    "question": "What is the difference between Element and Component ?",
-    "answer": "An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated."
-  },
-  {
-    "id": "14",
-    "question": "When to use a Class Component over a Function Component ?",
-    "answer": "If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component."
-  },
-  {
-    "id": "15",
-    "question": "What is state in React ?",
-    "answer": "State of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components."
-  },
-  {
-    "id": "16",
-    "question": "What are Pure Components ?",
-    "answer": "React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called."
-  },
-  {
-    "id": "17",
-    "question": "What is 'key' prop and what is the benefit of using it in arrays of elements ?",
-    "answer": "A key is a special string attribute you should include when creating arrays of elements. Key prop helps React identify which items have changed, are added, or are removed."
-  },
-  {
-    "id": "18",
-    "question": "What is Virtual DOM ?",
-    "answer": "The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the 'real' DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation."
-  },
-  {
-    "id": "19",
-    "question": "What is React Fiber ?",
-    "answer": "The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames."
-  },
-  {
-    "id": "20",
-    "question": "What are controlled components ?",
-    "answer": "A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function."
+    "redux": [
+      {
+        "id": 1,
+        "question": "What is redux",
+        "answer": "Redux is predictable state container for javascript apps. It can be used with React, Angular, Vue or even vanila javascript"
+      },
+      {
+        "id": 2,
+        "question": "Why would we want to use redux in react application",
+        "answer": "In react applications where you have considerable number of components which shares some common states, state management is quite difficult. This is where Redux is used, with the help of state container you can interact with react component irrespective of their DOM structure"
+      },
+      {
+        "id": 3,
+        "question": "What are three core concepts in Redux ?",
+        "answer": "1.Store - Holds state of your application 2.Action - Describes the changes in the state of application 3.Reducer - Carries out the state transition depending on the action"
+      }
+    ]
   }
 ]
