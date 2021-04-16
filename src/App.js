@@ -6,18 +6,23 @@ import { useState } from "react";
 
 function App() {
   let [input, setInput] = useState("");
+  let [selectType, setSelectType] = useState("react");
   const getSearchInput = function (ip) {
     input = ip;
     setInput(ip);
   };
 
+  const selectQuesType = function (type) {
+    setSelectType(type);
+  };
+
   return (
     <div className="App">
-      <Navbar getSearchInput={getSearchInput} />
+      <Navbar getSearchInput={getSearchInput} selectQuesType={selectQuesType} />
       <br />
-      <ReactBody input={input} />
-      <br />
-      <Footer />
+      <ReactBody input={input} selectQuesType={selectType} />
+
+      {/* <Footer /> */}
     </div>
   );
 }

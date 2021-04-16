@@ -7,6 +7,10 @@ export default class Navbar extends React.Component {
         this.props.getSearchInput(input);
     }
 
+    selectQuesType(type) {
+        this.props.selectQuesType(type)
+    }
+
     render() {
 
         const navBrand = {
@@ -32,8 +36,8 @@ export default class Navbar extends React.Component {
                                 Interview Questions
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">React</a>
-
+                                <button className="dropdown-item" onClick={() => this.selectQuesType('react')}>React</button>
+                                <button className="dropdown-item" onClick={() => this.selectQuesType('redux')}>Redux</button>
                             </div>
                         </li>
                         {/* <li className="nav-item">

@@ -12,12 +12,18 @@ export default function ReactBody(props) {
 
     useEffect(() => {
         axios.get('./data.json').then(resp => {
-            setDefaultIntrQues(resp.data);
-            setIntrvwQues(resp.data.slice(0, 10))
+
+            if (props.selectQuesType === 'react') {
+                setDefaultIntrQues(resp.data[0].react);
+                setIntrvwQues(resp.data[0].react.slice(0, 10))
+            } else {
+                setDefaultIntrQues(resp.data[1].redux);
+                setIntrvwQues(resp.data[1].redux)
+            }
         }).catch(err => {
             console.log("error", err)
         })
-    }, []);
+    }, [props.selectQuesType]);
 
     useEffect(() => {
         console.log('updateSearchResult', props.input, defaultIntrQues)
@@ -47,6 +53,7 @@ export default function ReactBody(props) {
                 getInterQuesList(10, 20);
                 setCurrentPage('2')
                 break;
+
         }
     }
 
@@ -65,12 +72,15 @@ export default function ReactBody(props) {
         </div>
     </div ><hr style={{ 'margin': '0px' }} /></React.Fragment>)
 
+    const pageHeader = props.selectQuesType === "react" ? "React" : "Redux"
 
-    return <div className="row justify-content-center">
+
+    return <div className="row justify-content-center" style={{ "margin": "0px" }}>
         <div className="col-md-8 accordion" id="accordionExample">
+            <h3 style={{ "text-align": "center" }}>{pageHeader} Interview Questions</h3>
             {renderingItems}
             <br /> <br />
-            <Pagination callPagination={callPagination} searchIp={props.input} currentPage={currentPage} />
+            <Pagination callPagination={callPagination} searchIp={props.input} currentPage={currentPage} defaultIntrQues={defaultIntrQues} />
         </div>
     </div>
 
