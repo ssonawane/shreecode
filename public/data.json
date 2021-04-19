@@ -82,7 +82,7 @@
         "id": 3,
         "question": "What are three core concepts in Redux ?",
         "img": "",
-        "answer": "1.Store - Holds state of your application 2.Action - Describes the changes in the state of application 3.Reducer - Carries out the state transition depending on the action"
+        "answer": "1. <b>Store</b> - Holds state of your application <br> 2. <b>Action</b> - Describes the changes in the state of application <br/> 3. <b>Reducer</b> - Carries out the state transition depending on the action"
       },
       {
         "id": 4,
@@ -113,6 +113,18 @@
         "question": "What are reducers ?",
         "img": "./images/first_reducer.png",
         "answer": "Specify how the app's state changes in response to action sent to store. Technically, it is a function that accepts state and action as an arguments, and returns the next state of the application"
+      },
+      {
+        "id": 9,
+        "question": "Explain responsibilites of redux store",
+        "img": "",
+        "answer": "1. Hold application state <br/> 2. Allow access to state via <b>getState()</b> <br/> 3. Allows state to be updated via <b>dispatch(action)</b> <br/> 4. Registers listeners via <b>subscribe(listner)</b> <br/> 5. Handles unregistering of listeners via function returned by subscribe(listner)"
+      },
+      {
+        "id": 10,
+        "question": "Simple redux store implementation and operations",
+        "img": "./images/first_redux.png",
+        "answer": ""
       }
     ]
   }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './ReactBody.module.css'
 import Pagination from './pagination'
+import parse from 'html-react-parser';
 
 export default function ReactBody(props) {
 
@@ -67,7 +68,7 @@ export default function ReactBody(props) {
         </div>
         <div id={"collapseOne" + ques.id} className="collapse" aria-labelledby={"heading" + ques.id} data-parent="#accordionExample">
             <div className={"card-body " + styles.ansText}>
-                {ques.answer}
+                {parse(ques.answer)}
                 {
                     ques.img !== "" && <div className="mt-3">
                         <img src={ques.img} class="img-fluid" />
