@@ -10,6 +10,7 @@ export default function ReactBody(props) {
     const [currentPage, setCurrentPage] = useState('1');
     const [intrvwQues, setIntrvwQues] = useState([]);
     const [defaultIntrQues, setDefaultIntrQues] = useState([]);
+    const [pageIndex, setPageIndex] = useState(1);
 
     useEffect(() => {
         axios.get('./data.json').then(resp => {
@@ -19,7 +20,7 @@ export default function ReactBody(props) {
                 setIntrvwQues(resp.data[0].react.slice(0, 10))
             } else {
                 setDefaultIntrQues(resp.data[1].redux);
-                setIntrvwQues(resp.data[1].redux)
+                setIntrvwQues(resp.data[1].redux.slice(0, 10))
             }
         }).catch(err => {
             console.log("error", err)
@@ -48,11 +49,13 @@ export default function ReactBody(props) {
         switch (item) {
             case '1':
                 getInterQuesList(0, 10);
-                setCurrentPage('1')
+                setCurrentPage('1');
+                setPageIndex(1)
                 break;
             case '2':
                 getInterQuesList(10, 20);
                 setCurrentPage('2')
+                setPageIndex(2)
                 break;
 
         }
@@ -86,7 +89,7 @@ export default function ReactBody(props) {
             <h3 style={{ "text-align": "center" }}>{pageHeader} Interview Questions</h3>
             {renderingItems}
             <br /> <br />
-            <Pagination callPagination={callPagination} searchIp={props.input} currentPage={currentPage} defaultIntrQues={defaultIntrQues} />
+            <Pagination callPagination={callPagination} pageIndex={pageIndex} searchIp={props.input} currentPage={currentPage} defaultIntrQues={defaultIntrQues} />
         </div>
     </div>
 

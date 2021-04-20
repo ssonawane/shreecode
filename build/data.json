@@ -125,6 +125,12 @@
         "question": "Simple redux store implementation and operations",
         "img": "./images/first_redux.png",
         "answer": ""
+      },
+      {
+        "id": 11,
+        "question": "How multiple reducers are handled in redux efficently ?",
+        "img": "./images/combine_reducer.png",
+        "answer": "Multiple reducers are handled with the help of redux helper function i.e combine reducer. Let's see the help of below example"
       }
     ]
   }
