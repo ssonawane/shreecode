@@ -61,6 +61,10 @@ export default function ReactBody(props) {
         }
     }
 
+    const clickHere = () => {
+        window.open('https://github.com/ssonawane');
+    }
+
     const renderingItems = intrvwQues.map(ques => <React.Fragment><div className="align-top" key={ques.id}>
         <div className="" id={"headingThree" + ques.id}>
             <h5 className="mb-0 text-wrap">
@@ -74,7 +78,7 @@ export default function ReactBody(props) {
                 {parse(ques.answer)}
                 {
                     ques.img !== "" && <div className="mt-3">
-                        <img src={ques.img} class="img-fluid" />
+                        <img src={ques.img} className="img-fluid" />
                     </div>
                 }
             </div>
@@ -85,6 +89,15 @@ export default function ReactBody(props) {
 
 
     return <div className="row justify-content-center" style={{ "margin": "0px" }}>
+        {/* <div className="col-md-3">
+            <div className="card text-white bg-danger mb-3" style={{ "maxWwidth": "18rem" }}>
+                <div className="card-header text-center">Notice Board</div>
+                <div className="card-body text-center">
+                    <h5 className="card-title">Visit My github work</h5>
+                    <button type="button" className="btn btn-success" onClick={clickHere}>Click Here</button>
+                </div>
+            </div>
+        </div> */}
         <div className="col-md-8 accordion" id="accordionExample">
             <h3 style={{ "text-align": "center" }}>{pageHeader} Interview Questions</h3>
             {renderingItems}

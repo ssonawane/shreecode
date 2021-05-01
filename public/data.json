@@ -131,6 +131,12 @@
         "question": "How multiple reducers are handled in redux efficently ?",
         "img": "./images/combine_reducer.png",
         "answer": "Multiple reducers are handled with the help of redux helper function i.e combine reducer. Let's see the help of below example"
+      },
+      {
+        "id": 12,
+        "question": "Functionalflow for redux",
+        "img": "./images/flow.png",
+        "answer": ""
       }
     ]
   }
